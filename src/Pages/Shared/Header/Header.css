@@ -1,38 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  height: 100vh;
-  background-color: rgb(29, 25, 25);
-}
-.nav {
-  position: fixed;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  height: 4rem;
-}
-
-.nav-link > a {
-  display: inline;
-  font-size: 1.1rem;
-  /* margin: 0 1rem; */
-  padding: 15px 20px;
-  color: #a7d1ca;
-  /* cursor: pointer;
-  background: #ff3d00; */
-}
-
-
-
-.nav-link > a:hover {
-  background: #070d0c;
-  color: #fff;
-  cursor: pointer;
-}
-
 section {
   display: grid;
   gap: 10;

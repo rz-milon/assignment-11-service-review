@@ -24,12 +24,12 @@ const Header = () => {
 
     const linkItems =
         <>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='home'>Home</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='service'>Service</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='about'>About</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='contact'>Contact</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='blog'>Blog</Link>
-            {/* <NavLink className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-gray-500 hover:text-white cursor-pointer text-gray-400" smooth spy to='login'>Login</NavLink> */}
+            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='home'>Home</Link>
+            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='service'>Service</Link>
+            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='about'>About</Link>
+            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='contact'>Contact</Link>
+            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='blog'>Blog</Link>
+            {/* <NavLink className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" smooth spy to='login'>Login</NavLink> */}
         </>
 
     return (
@@ -59,19 +59,19 @@ const Header = () => {
                 </div>
             </div>
             <>
-                <section id="home" className=" ">
+                <section id="home">
                     <Home />
                 </section>
-                <section id="service" className="bg-gray-400">
+                <section id="service">
                     <Service />
                 </section>
                 <section id="about">
                     <About />
                 </section>
-                <section id="contact" className="bg-green-400">
+                <section id="contact">
                     <Contact/>
                 </section>
-                <section id="blog" className="bg-gray-400">
+                <section id="blog">
                     <Blog/>
                 </section>
 
@@ -81,4 +81,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
