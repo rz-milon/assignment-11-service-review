@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import './Header.css';
+
 
 const Header = () => {
     const [navSize, setnavSize] = useState("5rem");
     const [navColor, setnavColor] = useState("transparent");
     const listenScrollEvent = () => {
-        window.scrollY > 10 ? setnavColor("#000") : setnavColor("transparent");
+        window.scrollY > 10 ? setnavColor("#fff") : setnavColor("transparent");
         window.scrollY > 10 ? setnavSize("4rem") : setnavSize("6rem");
     };
     useEffect(() => {
@@ -18,12 +18,22 @@ const Header = () => {
 
     const linkItems =
         <>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='/'>Home</NavLink>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='service'>Service</NavLink>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='about'>About</NavLink>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='contact'>Contact</NavLink>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='blog'>Blog</NavLink>
-            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" to='login'>Login</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "font-bold tracking-wide text-[#5e03fc] border-b-4 border-[#5e03fc] transition-colors duration-200 px-2 py-1 lg:px-5 lg:py-4 pointer-events-none"
+                : "px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 hover:text-[#5e03fc] cursor-pointer text-[#020226]"
+            } activeClass='active' to='/'>Home</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "font-bold tracking-wide text-[#5e03fc] border-b-4 border-[#5e03fc] transition-colors duration-200 px-2 py-1 lg:px-5 lg:py-4 pointer-events-none"
+                : "px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 hover:text-[#5e03fc] cursor-pointer text-[#020226]"
+            } to='service'>Service</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "font-bold tracking-wide text-[#5e03fc] border-b-4 border-[#5e03fc] transition-colors duration-200 px-2 py-1 lg:px-5 lg:py-4 pointer-events-none"
+                : "px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 hover:text-[#5e03fc] cursor-pointer text-[#020226]"
+            } to='about'>About</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "font-bold tracking-wide text-[#5e03fc] border-b-4 border-[#5e03fc] transition-colors duration-200 px-2 py-1 lg:px-5 lg:py-4 pointer-events-none"
+                : "px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 hover:text-[#5e03fc] cursor-pointer text-[#020226]"
+            } to='contact'>Contact</NavLink>
+            <NavLink className={({ isActive }) => isActive ? "font-bold tracking-wide text-[#5e03fc] border-b-4 border-[#5e03fc] transition-colors duration-200 px-2 py-1 lg:px-5 lg:py-4 pointer-events-none"
+                : "px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 hover:text-[#5e03fc] cursor-pointer text-[#020226]"
+            } to='blog'>Blog</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-black/10 text-[#020226] cursor-pointer hover:text-[#5e03fc]" to='login'>Login</NavLink>
         </>
 
     return (
