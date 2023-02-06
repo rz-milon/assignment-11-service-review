@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
-import Home from "../../Home/Home";
-import Service from "../../Service/Service";
-import About from "../../About/About";
 import './Header.css';
-import Contact from "../../Contact/Contact";
-import Blog from "../../Blog/Blog";
 
 const Header = () => {
     const [navSize, setnavSize] = useState("5rem");
@@ -24,12 +18,12 @@ const Header = () => {
 
     const linkItems =
         <>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='home'>Home</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='service'>Service</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='about'>About</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='contact'>Contact</Link>
-            <Link className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" activeClass='active' smooth spy to='blog'>Blog</Link>
-            {/* <NavLink className="px-2 py-1 lg:px-7 lg:py-5 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-400" smooth spy to='login'>Login</NavLink> */}
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='/'>Home</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='service'>Service</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='about'>About</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='contact'>Contact</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" activeClass='active' to='blog'>Blog</NavLink>
+            <NavLink className="px-2 py-1 lg:px-5 lg:py-4 hover:bg-[#1f2326] hover:text-white cursor-pointer text-gray-200" to='login'>Login</NavLink>
         </>
 
     return (
@@ -49,7 +43,7 @@ const Header = () => {
                         </div>
                     </div>
                     <div>
-                        <a smooth spy href="/" className="flex items-center flex-nowrap" ><img src="https://i.ibb.co/2tssyJH/logo.png" alt="" className='w-10 h-10 mx-3 font-bold text-[#5e03fc]' /><h2 className='text-xl md:text-2xl lg:text-3xl tracking-wide font-bold text-[#5e03fc] '>Al Farabi Photography </h2></a>
+                        <a href="/" className="flex items-center flex-nowrap" ><img src="https://i.ibb.co/2tssyJH/logo.png" alt="" className='w-10 h-10 mx-3 font-bold text-[#5e03fc]' /><h2 className='text-xl md:text-2xl lg:text-3xl tracking-wide font-bold text-[#5e03fc] '>Al Farabi Photography </h2></a>
                     </div>
                 </div>
                 <div className="navbar-end hidden lg:flex">
@@ -58,24 +52,6 @@ const Header = () => {
                     </div>
                 </div>
             </div>
-            <>
-                <section id="home">
-                    <Home />
-                </section>
-                <section id="service">
-                    <Service />
-                </section>
-                <section id="about">
-                    <About />
-                </section>
-                <section id="contact">
-                    <Contact/>
-                </section>
-                <section id="blog">
-                    <Blog/>
-                </section>
-
-            </>
         </div>
     );
 };
