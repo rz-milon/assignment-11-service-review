@@ -9,7 +9,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>
@@ -33,7 +33,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a>
@@ -45,7 +45,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
@@ -57,7 +57,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>
@@ -69,7 +69,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>
@@ -81,7 +81,7 @@ const Banner = () => {
                 <div className="absolute top-1/2 left-1/4">
                     <h1 className='text-6xl font-bold text-white tracking-wide'>Wildlife Photography
                     </h1>
-                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-blue-800' to='/'>Al Farabi Photography</Link></p>
+                    <p className='text-white font-semibold text-xl text-center'>By <br /> <Link className='text-3xl tracking-wide font-bold hover:text-[#5e03fc]' to='/'>Al Farabi Photography</Link></p>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide3" className="btn btn-circle">❮</a>

@@ -1,71 +1,71 @@
-// import React, { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle, FaGithub, FaTwitter } from 'react-icons/fa';
-// import { AuthContext } from '../../contexts/AuthProvider';
-// import { toast } from 'react-hot-toast';
-// import useToken from '../../hooks/useToken';
+import { AuthContext } from '../../contexts/AuthProvider';
+import { toast } from 'react-hot-toast';
+import useToken from '../../hooks/useToken';
 
 
 
 const Login = () => {
-    // const { login, googleLogin, setUser } = useContext(AuthContext);
-    // const storeToken = useToken();
-    // const navigate = useNavigate();
-    // const location = useLocation();
+    const { login, googleLogin, setUser } = useContext(AuthContext);
+    const storeToken = useToken();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    // const from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
 
-    // const handleLogin = event => {
-    //     event.preventDefault();
-    //     const form = event.target;
-    //     const email = form.email.value;
-    //     const password = form.password.value;
+    const handleLogin = event => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
 
-    //     login(email, password)
-    //         .then(result => {
-    //             const user = result.user;
-    //             form.reset();
-    //             toast.success("Successfully login");
+        login(email, password)
+            .then(result => {
+                const user = result.user;
+                form.reset();
+                toast.success("Successfully login");
 
-    //             const currentUser = {
-    //                 email: user.email
-    //             }
+                const currentUser = {
+                    email: user.email
+                }
 
-    //             console.log(currentUser);
+                console.log(currentUser);
 
-    //             // get jwt token
-    //             fetch('https://service-review-server-assignment-11-bice.vercel.app/jwt', {
-    //                 method: 'POST',
-    //                 headers: {
-    //                     'content-type': 'application/json'
-    //                 },
-    //                 body: JSON.stringify(currentUser)
-    //             })
-    //                 .then(res => res.json())
-    //                 .then(data => {
-    //                     console.log(data);
-    //                     // local storage is the easiest but not the best place to store jwt token
-    //                     localStorage.setItem('access-token', data.token);
-    //                     navigate(from, { replace: true });
-    //                 });
+                // get jwt token
+                fetch('https://service-review-server-assignment-11-bice.vercel.app/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        // local storage is the easiest but not the best place to store jwt token
+                        localStorage.setItem('access-token', data.token);
+                        navigate(from, { replace: true });
+                    });
 
-    //         })
-    //         .catch(error => toast.error("Opps!", `${error.message}`));
-    // }
+            })
+            .catch(error => toast.error("Opps!", `${error.message}`));
+    }
 
-    // const handleGoogleLogin = () => {
-    //     googleLogin()
-    //         .then(result => {
-    //             const user = result.user;
-    //             setUser(user)
-    //             const currentUser = { email: user.email }
+    const handleGoogleLogin = () => {
+        googleLogin()
+            .then(result => {
+                const user = result.user;
+                setUser(user)
+                const currentUser = { email: user.email }
 
-    //             // get jwt token and save it localStorage
-    //             storeToken(currentUser);
-    //         })
-    //         .catch(error => toast.error("Opps!", `${error.message}`));
-    // }
+                // get jwt token and save it localStorage
+                storeToken(currentUser);
+            })
+            .catch(error => toast.error("Opps!", `${error.message}`));
+    }
 
 
 
@@ -80,7 +80,7 @@ const Login = () => {
                         <p className="mt-2 text-sm text-gray-800">Please sign in to your account</p>
                     </div>
 
-                    <form  className="mt-8 space-y-6 text-left" >
+                    <form onSubmit={handleLogin} className="mt-8 space-y-6 text-left" >
                         <div className="relative">
                             <label className="text-sm font-bold text-gray-800 tracking-wide">Email address</label>
                             <input className=" w-full text-base py-2 px-1 border-b border-gray-300 focus:outline-none focus:border-indigo-500" type="email" name="email" required />
@@ -120,7 +120,7 @@ const Login = () => {
                     </div>
 
                     <div className="flex flex-row justify-center items-center space-x-10">
-                        <button className='opacity-50 hover:opacity-100  cursor-pointer transition ease-in duration-300'>
+                        <button onClick={handleGoogleLogin} className='opacity-50 hover:opacity-100  cursor-pointer transition ease-in duration-300'>
                             <FaGoogle className='w-8 h-8 text-blue-900'></FaGoogle>
                         </button>
                         <button className='opacity-50 hover:opacity-100  cursor-pointer transition ease-in duration-300'>

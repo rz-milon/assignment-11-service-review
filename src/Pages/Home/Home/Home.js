@@ -1,16 +1,21 @@
 import React from 'react';
+import Review from '../../Review/Review';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
+import ConditionalServiceLoad from '../ConditionalServiceLoad/ConditionalServiceLoad';
 import Contact from '../Contact/Contact';
-import Service from '../Service/Service';
+
+
+
 
 const Home = () => {
     return (
-        <div>
-            <Banner/>
-            <Service/>
-            <About/>
-            <Contact/>
+        <div className=''>
+            <Banner></Banner>
+            <ConditionalServiceLoad></ConditionalServiceLoad>
+            <Review></Review>
+            <About></About>
+            <Contact></Contact>
         </div>
     );
 };
